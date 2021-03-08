@@ -1,0 +1,19 @@
+@host = http://localhost:4444
+@tasks = http://localhost:4444/tasks
+
+###
+GET {{host}}
+
+###
+GET {{tasks}}
+
+###
+POST {{tasks}}
+Content-Type: application/json
+
+{
+	"title":"Task One"
+}
+
+###
+PUT {{tasks}}?id=1
